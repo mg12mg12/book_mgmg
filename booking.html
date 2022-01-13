@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百年書人_線上預約</title>
+     <!--網頁標題左側顯示-->
+    <link rel="icon" href="pic/logo_icon.ico" type="image/x-icon">
+    <!--收藏夾顯示圖示-->
+    <link rel="shortcut icon" href="pic/logo_icon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <!-- <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+  <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="jqueryui/style.css">
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  });
+  </script> -->
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <input type="checkbox" name="" id="menu_control">
+    <header class="full_header">
+        <div class="header">
+            <div class="header_logo_wrap">
+                <a href="04_home_page.html" class="logo">
+                    <img src="pic/logo_3_none.png" alt="百年書人logo">
+                </a>
+                <label for="menu_control" class="menu_btn">
+                    <p>選單</p>
+                </label>
+            </div>
+            <nav class="nav">
+                <div class="item">
+                    <a href="lounge.html"><span>Lounge</span>休息室介紹</a>
+                </div>
+                <div class="item">
+                    <a href="booking.html"><span>Booking</span>線上預約</a>
+                </div>
+                <div class="item">
+                    <a href="about_map.html"><span>Shop List</span>店鋪資訊</a>
+                </div>
+                <div class="item">
+                    <a href="product.html"><span>Product</span>商品</a>
+                </div>
+                <div class="item">
+                    <a href="new.html"><span>What's New</span>最新消息</a>
+                </div>
+            </nav>
+            <div class="icon_box">
+                <a href="#" class="user_icon"><img src="pic/user_icon.png" alt="會員"><span>會員專區</span></a>
+                <a href="#" class="shop_icon"><img src="pic/shopping-bag_icon.png" alt="購物車"><span>購物車
+                </span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 預約畫面banner -->
+    <div class="lounge_banner">
+        <div>線上預約</div>
+    </div>
+
+    <!-- 路徑  -->
+    <ul class="path_ba">
+        <li><a href="04_home_page.html">首頁</a></li>
+        <li><a href="#">線上預約</a></li>
+    </ul>
+
+    <!-- 預約內容 -->
+    <div class="booking_con">
+        <!-- 休息室圖片 -->
+        <div class="pic">
+            <img src="pic/lounge_pic (1).jpg" alt="">
+        </div>
+        <!-- 預約資料區 -->
+        <div class="txt">
+            <form>
+                <div class="input_item">
+                    <P>選擇休息室：</P>
+                    <select id="lounge" name="選擇休息室">
+                        <option value="1">消音休息室</option>
+                        <option value="2">普通の休息室</option>
+                        <option value="3">組隊拆家休息室</option>
+                    </select>
+                </div>
+                <div class="input_item">
+                    <label for="num">人數：</label>
+                    <input type="text" id="num" name="num" placeholder="需2人(含)以上">
+                </div>
+                <div class="input_item">
+                    <p>日期：</p>
+                    <input type="date" id="date" value="請選擇日期">
+                </div>
+                <div class="input_item">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" name="name" placeholder="姓名">
+                </div>
+                <div class="input_item">
+                    <label for="phone">電話：</label>
+                    <input type="text" id="phone" name="phone" placeholder="09-xxxxxxxx">
+                </div>
+                <div class="input_item">
+                    <label for="mail">E-mail：</label>
+                    <input type="mail" id="mail" name="mail" placeholder="xxx@xxx.com">
+                </div>
+                <div class="input_item">
+                    <button>
+                        <a href="#">送出</a>
+                    </button>
+                </div>
+            </form>
+            
+        </div>
+        
+
+    </div>
+    
+    <!-- 頁尾 -->
+    <footer class="full_footer">
+        <div class="footer">
+            <div class="foot_txt">
+                <p>AboutUs</p>
+                <a href="#">關於百年書人</a><br>
+                <a href="#">企業理念</a><br>
+                <a href="#">經營內容</a>
+            </div>
+            <div class="foot_txt">
+                <p>Lounge</p>
+                <a href="#">獨立休息室</a><br>
+                <a href="#">休息室一覽</a><br>
+                <a href="#">線上預約</a>
+            </div>
+            <div class="foot_txt">
+                <p>Contact</p>
+                <a href="#">聯絡我們</a><br>
+                <a href="#">店鋪資訊</a><br>
+                <a href="#">線上客服</a>
+            </div>
+            <div class="foot_icon">
+                <p>FollowUs</p>
+                <a href="https://zh-tw.facebook.com/"><img src="pic/facebook_icon.png" alt="fb"></a>
+                <a href="https://www.instagram.com/"><img src="pic/instagram_icon.png" alt="ig"></a>
+            </div>
+            <div class="foot_logo">
+                <img src="pic/logo_3_none.png" alt="百年書人">
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright ©2021 百年書人 All Rights Reserved.</p>
+            <p>本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊[TibaMe-前端設計工程師養成班]，後續會由專人協助處理。</p>
+        </div>
+    </footer>
+</body>
+</html>
