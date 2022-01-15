@@ -498,7 +498,7 @@
         margin: 0px 15px;
     }
     .foot_txt p{
-        font-size: 18px;
+        font-size: 20px;
         /* margin: 10px 40px 5px 40px; */
         line-height: 30px;
         color: #7f694c;
@@ -526,17 +526,19 @@
     .foot_logo{
         margin: 50px;
     }
-    .foot_logo img{
-        height: 100px;
-        display: none;
-    }
     .copyright{
         text-align: center;
         display: inline-block;
         width: 100%;
         color: #999;
     }
-
+    /* 頁尾 */
+    .foot_logo img{
+        display: none;
+    }
+    .foot_txt:nth-child(1){
+        margin-left: 100px;
+    }
 
 
 }
@@ -813,7 +815,7 @@
         margin: 0px 15px;
     }
     .foot_txt p{
-        font-size: 18px;
+        font-size: 20px;
         /* margin: 10px 40px 5px 40px; */
         line-height: 30px;
         color: #7f694c;

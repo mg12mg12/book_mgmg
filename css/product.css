@@ -181,7 +181,7 @@ footer{
     margin: 0px 15px;
 }
 .foot_txt p{
-    font-size: 18px;
+    font-size: 20px;
     /* margin: 10px 40px 5px 40px; */
     line-height: 30px;
     color: #7f694c;
@@ -372,6 +372,9 @@ footer{
     /* 頁尾 */
     .foot_logo img{
         display: none;
+    }
+    .foot_txt:nth-child(1){
+        margin-left: 100px;
     }
     .lounge_present{
         width: 100%;
