@@ -10,17 +10,23 @@
      <!--收藏夾顯示圖示-->
      <link rel="shortcut icon" href="pic/logo_icon.ico" type="image/x-icon">
  
-     <link rel="stylesheet" href="reset.css">
-     <link rel="stylesheet" href="bookstore.css">
+     <link rel="stylesheet" href="css/normalize.css">
+     <link rel="stylesheet" href="css/product_con.css">
  </head>
  
  <body>
     <!-- 導覽列 -->
-    <div class="full_header">
+    <input type="checkbox" name="" id="menu_control">
+    <header class="full_header">
         <div class="header">
-            <a href="04_home_page.html" class="logo">
-                <img src="pic/logo_3_none.png" alt="百年書人logo">
-            </a>
+            <div class="header_logo_wrap">
+                <a href="home_page.html" class="logo">
+                    <img src="pic/logo_3_none.png" alt="百年書人logo">
+                </a>
+                <label for="menu_control" class="menu_btn">
+                    <p>選單</p>
+                </label>
+            </div>
             <nav class="nav">
                 <div class="item">
                     <a href="lounge.html"><span>Lounge</span>休息室介紹</a>
@@ -39,15 +45,16 @@
                 </div>
             </nav>
             <div class="icon_box">
-                <a href="#" class="user_icon"><img src="pic/user_icon.png" alt="會員"></a>
-                <a href="#" class="shop_icon"><img src="pic/shopping-bag_icon.png" alt="購物車"></a>
+                <a href="#" class="user_icon"><img src="pic/user_icon.png" alt="會員"><span>會員專區</span></a>
+                <a href="#" class="shop_icon"><img src="pic/shopping-bag_icon.png" alt="購物車"><span>購物車
+                </span></a>
             </div>
         </div>
-    </div>
+    </header>
 
    <!-- 路徑  -->
    <ul class="path">
-        <li><a href="04_home_page.html">首頁</a></li>
+        <li><a href="home_page.html">首頁</a></li>
         <li><a href="product.html">商品一覽</a></li>
         <li><a href="#">書籍</a></li>
    </ul>
@@ -211,7 +218,7 @@
     </div>
 
     <!-- 頁尾 -->
-    <div class="full_footer">
+    <footer class="full_footer">
         <div class="footer">
             <div class="foot_txt">
                 <p>AboutUs</p>
@@ -244,7 +251,7 @@
             <p>Copyright ©2021 百年書人 All Rights Reserved.</p>
             <p>本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊[TibaMe-前端設計工程師養成班]，後續會由專人協助處理。</p>
         </div>
-    </div>
+    </footer>
 </body>
 
 

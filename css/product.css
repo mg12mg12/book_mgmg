@@ -1,0 +1,600 @@
+#menu_control{
+    position: absolute;
+    display: none;
+}
+
+.header{
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+
+.menu_btn{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+.menu_btn p{
+    opacity: 0;
+}
+.menu_btn::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 2px;
+    width: 36px;
+    background-color: #7f694c;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px 10px 0px #7f694c;
+    transition: .5s;
+}
+.menu_btn::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 2px;
+    width: 36px;
+    background-color: #7f694c;
+    bottom: 0;
+    margin: auto;
+    transition: .5s;
+}
+
+#menu_control:checked ~.full_header .header .menu_btn::before{
+    transform: rotate(45deg);
+    box-shadow:  0 0 0 transparent;
+}
+#menu_control:checked ~.full_header .header .menu_btn::after{
+    transform: rotate(-45deg);
+    bottom: 19px;
+    box-shadow:  0 0 0 transparent;
+}
+
+
+.header .logo{
+    height: 100%;
+}
+.logo img{
+    height: 80px;
+    margin: 5px 10px;
+}
+.icon_box{
+    display: flex;
+    flex-direction: row;
+    margin-top:40px ;
+    box-sizing: border-box;
+}
+.user_icon{
+    height: 100%;
+    
+}
+.icon_box a{
+    text-decoration: none;
+    /* margin: 0px 10px; */
+
+}
+.user_icon img{
+    height: 20px;
+    opacity:0.3;
+    /* display: none; */
+    /* padding-bottom: 5px; */
+    
+    margin-right: 20px;
+}
+.user_icon img:hover{
+    opacity:1;
+}
+.user_icon span{
+    position: fixed;
+    font-size: 30px;
+    color: #fff;
+    transform: rotate(70deg);
+    bottom: 50%;
+    right: 33%;
+    display: none;
+}
+.shop_icon{
+    height: 100%;
+    
+}
+
+.shop_icon img{
+    height: 20px;
+    opacity:0.3;
+    /* display: none; */
+}
+.shop_icon img:hover{
+    opacity:1;
+}
+.shop_icon span{
+    position: fixed;
+    font-size: 30px;
+    color: #fff;
+    transform: rotate(70deg);
+    bottom: 52%;
+    right: 37%;
+    display: none;
+}
+
+
+.nav .item{
+    /* border: black 1px solid; */
+    width: 120px;
+    height: 23px;
+    line-height: 22px;
+    float:left;
+    overflow:hidden;
+    text-align:center;
+}
+.nav a{
+    text-decoration: none;
+    display:block;
+    width: 140px;
+    color: #7f694c;
+    overflow:hidden;
+    margin-top: 1px;
+}
+.nav a span{
+    display: block;
+    margin-top: -22px;
+}
+.nav a:hover{
+    padding-top: 20px;
+}
+.nav span::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color:#7f694c;
+    display: block;
+}
+.nav span:hover::after{
+    width: 70%;
+    margin: auto;
+}
+/* 頁尾 */
+footer{
+    width: 100%;
+    background-color: #ac87735d;
+    box-sizing: border-box;
+}
+.footer{
+    /* border: solid 1px black; */
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.foot_txt{
+    /* border: black 1px solid; */
+    margin: 0px 15px;
+}
+.foot_txt p{
+    font-size: 18px;
+    /* margin: 10px 40px 5px 40px; */
+    line-height: 30px;
+    color: #7f694c;
+}
+.foot_txt a{
+    font-size: 12px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #7f694c;
+}
+.foot_icon{
+    /* border: black 1px solid; */
+    height: 100%;
+    margin: 0px 15px;
+}
+.foot_icon p{
+    font-size: 18px;
+    /* margin: 10px 40px 5px 40px; */
+    line-height: 30px;
+    color: #7f694c;
+}
+.foot_icon a img{
+    width: 30px;
+}
+.foot_logo{
+    margin: 50px;
+}
+.foot_logo img{
+    height: 100px;
+}
+.copyright{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    color: #999;
+}
+/* 大家的banner */
+.lounge_banner{
+    width: 100%;
+    height: 476px;
+    background-image:url(../pic/lounge_room.jpg) ;
+    background-position: center;
+    margin-top: 90px;
+    box-shadow:0px -476px 10px #0000009f inset ;
+}
+.lounge_banner div{
+    text-align: center;
+    padding-top: 250px;
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+}
+.lounge_banner div::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color:#fff;
+    display: block;
+}
+.lounge_banner div:hover::after{
+    width: 150px;
+    margin: auto;
+    transition: .5s;
+}
+
+/* ------------------------------------------ */
+/* 商品總覽頁 */
+
+.product_box .shop{
+    position: absolute;
+    top: 0;
+    left:-10px;
+    background-color: #a77f69;
+    color: #fff;
+    padding: 5px 5px;
+    margin-top:10px ;
+}
+
+.product_box .tr{
+    width: 0;
+    height: 0;
+    border-top: 5px solid #75594a;
+    border-left: 10px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+.product_box .txt{
+    padding: 20px;
+}
+.product_box .txt h3{
+    font-size: 15px;
+    text-align: center;
+    color: #5a4933;
+}
+.product_box .txt p{
+    text-align: left;
+    margin-top: 5px;
+    font-size: 5px;
+    margin-left: 4px;
+    color: #aaa;
+}
+.product_box .txt span{
+    color: #ca7e4c;
+    margin-left: 70px;
+    font-size: 20px;
+}
+/* 商品頁目錄 */
+.path{
+    width: 100%;
+    margin:auto;
+    margin-top: 100px;
+    display: flex;
+    list-style-type: none;
+    box-sizing: border-box;
+    padding: 0px 20px;
+}
+.path li{
+    margin: 10px 0px;
+}
+.path a{
+    text-decoration: none;
+    color: #888;
+    font-size: 14px;
+}
+.path li:nth-child(-n+2)::after{
+    content: '>';
+    margin:0px 7px;
+    color: #bbb;
+}
+
+
+
+
+/* --------------------------------------------- */
+
+/* --------手機-------- */
+
+@media screen and (max-width:875px) {
+    .full_header{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        border-bottom: #a77f69 4px solid;
+        background-color: #fff;
+    }
+    .header_logo_wrap{
+        background-color: #fff;
+        position: relative;
+        z-index: 11;
+    }
+    
+    .nav{
+        width: 100%;
+        height: auto;
+        background-color: #caa779;
+        position: absolute;
+        top: -1000%;
+        text-align: center;
+        margin:0px auto;
+        opacity: 0;
+        transition: .5s;
+        z-index: 10;
+    }
+    .nav .item{
+        width: 100%;
+        text-align: center;
+        margin:10px auto;
+        /* border-bottom: 2px dashed #000; */
+    }
+    .nav a{
+        text-align: center;
+        margin: auto;
+    }
+    #menu_control:checked ~ .full_header .header .nav{
+        opacity: 1;
+        top:90px;
+    }
+
+    .icon_box{
+        right: 2%;
+        z-index: 11;
+        margin-top: 0 ;
+        position: absolute;
+        top: 40px;
+    }
+    /* 頁尾 */
+    .foot_logo img{
+        display: none;
+    }
+    .lounge_present{
+        width: 100%;
+        margin: 10px auto;
+    }
+    /* 商品頁 */
+    .product_more{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+    .total_con{
+        width: 100%;
+        margin: auto;
+    }
+    .product_box{
+        width: 100%;
+        border:1px solid #d8a68b94;
+        border-radius: 5px;
+        position: relative;
+        margin-top: 20px;
+        text-decoration: none;
+        display: flex;
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+    .product_box .pic{
+        width: 30%;
+        height: 20%;
+        box-sizing: border-box;
+        padding: 5px 15px 0px 15px;
+    }
+    .product_box img{
+        width: 100%;
+        vertical-align: top;/*類似reset 因為框框會有多出的顏色(可以試試把這條去掉看差別)*/
+        position: relative;
+    }
+
+    /* 商品內容總和 */
+
+    .book_li{
+        width: 100%;
+        list-style-type: none;
+        box-sizing: border-box;
+        margin: 20px auto;
+        font-size: 16px;
+        line-height: 45px;
+        display: flex;
+        text-align: center;
+        padding-inline-start:0px;
+    }
+    .book_li li{
+        margin: auto;
+    }
+    .book_li a{
+        width: 100%;
+        text-decoration: none;
+        color: #7f694c;
+        /* border-bottom:1px dashed #a77f69 ; */
+        display: block;
+        margin: auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .book_li a:hover{
+        background-color: #aaa;
+        color: #fff;
+    }
+}
+
+/* --------桌機-------- */
+@media screen and (min-width:875px) {
+    .full_header{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        border-bottom: #a77f69 4px solid;
+        background-color: #fff;
+    }
+    .header{
+        /* border: #7f694c 1px solid; */
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        margin: auto;
+        text-align: center;
+        justify-content: space-around;
+        overflow:hidden;
+    }
+    .nav{
+        font-size: 15px;
+        box-sizing: border-box;
+        padding-top: 37px;
+    }
+    .menu_btn{
+        display: none;
+    }
+
+    .product_more{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+    .total_con{
+        width: 1200px;
+        display: flex;
+        margin: auto;
+    }
+    .product_box{
+        width: 140px;
+        border:1px solid #d8a68b94;
+        border-radius: 5px;
+        position: relative;
+        margin-left: 50px;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+    .product_box .pic{
+        width: 100%;
+        height: 60%;
+        box-sizing: border-box;
+        padding: 5px 15px 0px 15px;
+    }
+    .product_box img{
+        width: 100%;
+        vertical-align: top;/*類似reset 因為框框會有多出的顏色(可以試試把這條去掉看差別)*/
+        position: relative;
+    }
+    
+    .product_box .shop{
+        position: absolute;
+        top: 0;
+        left:-10px;
+        background-color: #a77f69;
+        color: #fff;
+        padding: 5px 5px;
+        margin-top:10px ;
+    }
+    
+    .product_box .tr{
+        width: 0;
+        height: 0;
+        border-top: 5px solid #75594a;
+        border-left: 10px solid transparent;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+    .product_box .txt{
+        padding: 20px;
+    }
+    .product_box .txt h3{
+        font-size: 15px;
+        text-align: center;
+        color: #5a4933;
+    }
+    .product_box .txt p{
+        text-align: left;
+        margin-top: 5px;
+        font-size: 5px;
+        margin-left: 4px;
+        color: #aaa;
+    }
+    .product_box .txt span{
+        color: #ca7e4c;
+        margin-left: 70px;
+        font-size: 20px;
+    }
+    /* 商品頁目錄 */
+    .path{
+        width: 1200px;
+        margin:auto;
+        margin-top: 100px;
+        display: flex;
+        list-style-type: none;
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+    .path li{
+        margin: 10px 0px;
+    }
+    .path a{
+        text-decoration: none;
+        color: #888;
+        font-size: 14px;
+    }
+    .path li:nth-child(-n+2)::after{
+        content: '>';
+        margin:0px 7px;
+        color: #bbb;
+    }
+    
+    
+    /* 商品路徑 */
+    
+    .book_li{
+        width: 20%;
+        height: 100%;
+        /* border: 2px solid #a77f69; */
+        list-style-type: none;
+        box-sizing: border-box;
+        margin: 30px 70px 40px 20px;
+        text-align: left;
+        font-size: 16px;
+        line-height: 45px;
+    
+    }
+    .book_li a{
+        width: 100%;
+        text-decoration: none;
+        color: #7f694c;
+        border-bottom:1px dashed #a77f69 ;
+        display: block;
+        box-sizing: border-box;
+        padding-left: 15px;
+        /* background-color: #aaa; */
+    }
+    .book_li a:hover{
+        background-color: #aaa;
+        color: #fff;
+    }
+}

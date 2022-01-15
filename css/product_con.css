@@ -1,0 +1,754 @@
+#menu_control{
+    position: absolute;
+    display: none;
+}
+
+.header{
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+
+.menu_btn{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+.menu_btn p{
+    opacity: 0;
+}
+.menu_btn::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 2px;
+    width: 36px;
+    background-color: #7f694c;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px 10px 0px #7f694c;
+    transition: .5s;
+}
+.menu_btn::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 2px;
+    width: 36px;
+    background-color: #7f694c;
+    bottom: 0;
+    margin: auto;
+    transition: .5s;
+}
+
+#menu_control:checked ~.full_header .header .menu_btn::before{
+    transform: rotate(45deg);
+    box-shadow:  0 0 0 transparent;
+}
+#menu_control:checked ~.full_header .header .menu_btn::after{
+    transform: rotate(-45deg);
+    bottom: 19px;
+    box-shadow:  0 0 0 transparent;
+}
+
+
+.header .logo{
+    height: 100%;
+}
+.logo img{
+    height: 80px;
+    margin: 5px 10px;
+}
+.icon_box{
+    display: flex;
+    flex-direction: row;
+    margin-top:40px ;
+    box-sizing: border-box;
+}
+.user_icon{
+    height: 100%;
+    
+}
+.icon_box a{
+    text-decoration: none;
+    /* margin: 0px 10px; */
+
+}
+.user_icon img{
+    height: 20px;
+    opacity:0.3;
+    /* display: none; */
+    /* padding-bottom: 5px; */
+    
+    margin-right: 20px;
+}
+.user_icon img:hover{
+    opacity:1;
+}
+.user_icon span{
+    position: fixed;
+    font-size: 30px;
+    color: #fff;
+    transform: rotate(70deg);
+    bottom: 50%;
+    right: 33%;
+    display: none;
+}
+.shop_icon{
+    height: 100%;
+    
+}
+
+.shop_icon img{
+    height: 20px;
+    opacity:0.3;
+    /* display: none; */
+}
+.shop_icon img:hover{
+    opacity:1;
+}
+.shop_icon span{
+    position: fixed;
+    font-size: 30px;
+    color: #fff;
+    transform: rotate(70deg);
+    bottom: 52%;
+    right: 37%;
+    display: none;
+}
+
+
+.nav .item{
+    /* border: black 1px solid; */
+    width: 120px;
+    height: 23px;
+    line-height: 22px;
+    float:left;
+    overflow:hidden;
+    text-align:center;
+}
+.nav a{
+    text-decoration: none;
+    display:block;
+    width: 140px;
+    color: #7f694c;
+    overflow:hidden;
+    margin-top: 1px;
+}
+.nav a span{
+    display: block;
+    margin-top: -22px;
+}
+.nav a:hover{
+    padding-top: 20px;
+}
+.nav span::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color:#7f694c;
+    display: block;
+}
+.nav span:hover::after{
+    width: 70%;
+    margin: auto;
+}
+/* 頁尾 */
+footer{
+    width: 100%;
+    background-color: #ac87735d;
+    box-sizing: border-box;
+}
+.footer{
+    /* border: solid 1px black; */
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.foot_txt{
+    /* border: black 1px solid; */
+    margin: 0px 15px;
+}
+.foot_txt p{
+    font-size: 18px;
+    /* margin: 10px 40px 5px 40px; */
+    line-height: 30px;
+    color: #7f694c;
+}
+.foot_txt a{
+    font-size: 12px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #7f694c;
+}
+.foot_icon{
+    /* border: black 1px solid; */
+    height: 100%;
+    margin: 0px 15px;
+}
+.foot_icon p{
+    font-size: 18px;
+    /* margin: 10px 40px 5px 40px; */
+    line-height: 30px;
+    color: #7f694c;
+}
+.foot_icon a img{
+    width: 30px;
+}
+.foot_logo{
+    margin: 50px;
+}
+.foot_logo img{
+    height: 100px;
+}
+.copyright{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    color: #999;
+}
+
+/* 商品頁目錄 */
+.path{
+    width: 100%;
+    margin:auto;
+    margin-top: 100px;
+    display: flex;
+    list-style-type: none;
+    box-sizing: border-box;
+    padding: 0px 20px;
+}
+.path li{
+    margin: 10px 0px;
+}
+.path a{
+    text-decoration: none;
+    color: #888;
+    font-size: 14px;
+}
+.path li:nth-child(-n+2)::after{
+    content: '>';
+    margin:0px 7px;
+    color: #bbb;
+}
+
+
+
+
+/* --------------------------------------------- */
+
+/* --------手機-------- */
+
+@media screen and (max-width:875px) {
+    .full_header{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        border-bottom: #a77f69 4px solid;
+        background-color: #fff;
+    }
+    .header_logo_wrap{
+        background-color: #fff;
+        position: relative;
+        z-index: 11;
+    }
+    
+    .nav{
+        width: 100%;
+        height: auto;
+        background-color: #caa779;
+        position: absolute;
+        top: -1000%;
+        text-align: center;
+        margin:0px auto;
+        opacity: 0;
+        transition: .5s;
+        z-index: 10;
+    }
+    .nav .item{
+        width: 100%;
+        text-align: center;
+        margin:10px auto;
+        /* border-bottom: 2px dashed #000; */
+    }
+    .nav a{
+        text-align: center;
+        margin: auto;
+    }
+    #menu_control:checked ~ .full_header .header .nav{
+        opacity: 1;
+        top:90px;
+    }
+
+    .icon_box{
+        right: 2%;
+        z-index: 11;
+        margin-top: 0 ;
+        position: absolute;
+        top: 40px;
+    }
+    /* 頁尾 */
+    .foot_logo img{
+        display: none;
+    }
+    .lounge_present{
+        width: 100%;
+        margin: 10px auto;
+    }
+    /* 商品內容總和 */
+
+    .book_li{
+        display: none;
+    }
+    .book_con{
+        width: 80%;
+        /* border: black 1px solid; */
+        margin: 10px auto;
+    }
+    .book_con_top{
+        margin:  auto;
+    }
+    .book_con_top .pic{
+        width: 70%;
+        margin: auto;
+    }
+    .book_con_top .pic img{
+        width: 100%;
+        display:block;
+        margin: 35px auto;
+    }
+    .book_con .txt{
+        margin-top: 30px;
+        color: #4b3c2a;
+    }
+    .book_con h3{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .book_con p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    /* 商品出版資訊 */
+    .book_con .name{
+        border-bottom: 1px solid #ccc;
+    }
+    .book_con .buy p{
+        margin: 5px 0px 5px 0px;
+    }
+    .book_con .buy .pri{
+        font-size: 20px;
+        font-weight: bolder;
+        color: #7f694c
+    }
+    .book_con .buy span{
+        background-color: #7f694c;
+        color: #fff;
+        display:inline-block;
+        box-sizing: border-box;
+        padding: 0px 5px;
+        border-radius: 2px;
+        margin:0px 3px 3px 0px;
+        font-size: 12px;
+    }
+    /* 購買按鈕 */
+    .book_con .buy button{
+        width: 100px;
+        background-color: #fff;
+        border: #7f694c 2px solid;
+        border-radius: 3px;
+        margin:10px 10px 40px 0px;
+        font-size: 14px;
+    }
+    .book_con .buy button:nth-child(2){
+        color: #fff;
+        background-color: #7f694c;
+    }
+    .book_con .buy button:hover{
+        background-color: #7f694c;
+        color: #fff;
+    }
+    .book_con .buy button:nth-child(2):hover{
+        background-color: #5a4933;
+    }
+    /* 付款取貨方式 */
+    .book_con .buy .pay{
+        border-top: 1px solid #ccc;
+    }
+    .book_con .buy .pay span{
+        width: 17px;
+        height: 17px;
+        color: #7f694c;
+        background-color: #fff;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bolder;
+        transform: rotate(90deg);
+    }
+    /* .book_con .pay_box{
+        width: 300px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+    }
+    .book_con .pay_box .item{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        color: #7f694c;
+        transition: .5s;
+    }
+    .book_con .pay_box:hover .item{
+        top:0;
+    } */
+    
+    /* 詳細資訊 */
+    .book_con_bottom .nav_box{
+        display: none;
+       
+    }
+    
+    
+    /* 書籍內容 */
+    .book_con_bottom .con_item{
+        margin-left: 12px;
+        margin-bottom: 25px;
+        color: #4b3c2a;
+    }
+    .book_con_bottom .con_item h3{
+        border-bottom: #ccc 1px solid;
+    }
+    
+    
+    /* 同類書籍推薦 */
+    .con_item:nth-child(6){
+        display: none;
+    }
+    .con_product_more{
+        display: none;
+    }
+    
+}
+
+
+/* --------桌機-------- */
+@media screen and (min-width:875px) {
+    .full_header{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        border-bottom: #a77f69 4px solid;
+        background-color: #fff;
+    }
+    .header{
+        /* border: #7f694c 1px solid; */
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        margin: auto;
+        text-align: center;
+        justify-content: space-around;
+        overflow:hidden;
+    }
+    .nav{
+        font-size: 15px;
+        box-sizing: border-box;
+        padding-top: 37px;
+    }
+    .menu_btn{
+        display: none;
+    }
+    /* 商品頁目錄 */
+    .path{
+        width: 1200px;
+        margin:auto;
+        margin-top: 100px;
+        display: flex;
+        list-style-type: none;
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+    .path li{
+        margin: 10px 0px;
+    }
+    .path a{
+        text-decoration: none;
+        color: #888;
+        font-size: 14px;
+    }
+    .path li:nth-child(-n+2)::after{
+        content: '>';
+        margin:0px 7px;
+        color: #bbb;
+    }
+    
+    .total_con{
+        /* border: 1px solid black; */
+        width: 1200px;
+        display: flex;
+        margin: auto;
+    }
+    /* 商品路徑 */
+    
+    .book_li{
+        width: 20%;
+        height: 100%;
+        /* border: 2px solid #a77f69; */
+        list-style-type: none;
+        box-sizing: border-box;
+        margin: 30px 70px 40px 20px;
+        text-align: left;
+        font-size: 16px;
+        line-height: 45px;
+    
+    }
+    .book_li a{
+        width: 100%;
+        text-decoration: none;
+        color: #7f694c;
+        border-bottom:1px dashed #a77f69 ;
+        display: block;
+        box-sizing: border-box;
+        padding-left: 15px;
+        /* background-color: #aaa; */
+    }
+    .book_li a:hover{
+        background-color: #aaa;
+        color: #fff;
+    }
+    .book_con{
+        width: 80%;
+        /* border: black 1px solid; */
+        margin-top: 30px;
+    }
+    .book_con_top{
+        display: flex;
+    }
+    .book_con_top .pic{
+        width: 50%;
+        /* border: 1px solid black; */
+    }
+    .book_con_top .pic img{
+        width: 70%;
+        display:block;
+        margin: 35px auto;
+    }
+    .book_con .txt{
+        margin-top: 30px;
+        color: #4b3c2a;
+    }
+    .book_con h3{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .book_con p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    /* 商品出版資訊 */
+    .book_con .name{
+        border-bottom: 1px solid #ccc;
+    }
+    .book_con .buy p{
+        margin: 5px 0px 5px 0px;
+    }
+    .book_con .buy .pri{
+        font-size: 20px;
+        font-weight: bolder;
+        color: #7f694c
+    }
+    .book_con .buy span{
+        background-color: #7f694c;
+        color: #fff;
+        display:inline-block;
+        box-sizing: border-box;
+        padding: 0px 5px;
+        border-radius: 2px;
+        margin:0px 3px 3px 0px;
+        font-size: 12px;
+    }
+    /* 購買按鈕 */
+    .book_con .buy button{
+        width: 100px;
+        background-color: #fff;
+        border: #7f694c 2px solid;
+        border-radius: 3px;
+        margin:10px 10px 40px 0px;
+        font-size: 14px;
+    }
+    .book_con .buy button:nth-child(2){
+        color: #fff;
+        background-color: #7f694c;
+    }
+    .book_con .buy button:hover{
+        background-color: #7f694c;
+        color: #fff;
+    }
+    .book_con .buy button:nth-child(2):hover{
+        background-color: #5a4933;
+    }
+    /* 付款取貨方式 */
+    .book_con .buy .pay{
+        border-top: 1px solid #ccc;
+    }
+    .book_con .buy .pay span{
+        width: 17px;
+        height: 17px;
+        color: #7f694c;
+        background-color: #fff;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bolder;
+        transform: rotate(90deg);
+    }
+    /* .book_con .pay_box{
+        width: 300px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+    }
+    .book_con .pay_box .item{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        color: #7f694c;
+        transition: .5s;
+    }
+    .book_con .pay_box:hover .item{
+        top:0;
+    } */
+    
+    /* 詳細資訊 */
+    .book_con_bottom .nav_box{
+        display: flex;
+        /* border: yellow 1px solid; */
+        margin:30px auto;
+    }
+    .book_con_bottom .con_nav{
+        display: flex;
+        width: 100%;
+        /* border: red 1px solid; */
+        margin:0px auto;
+        justify-content: center;
+    }
+    .book_con_bottom .con_nav li{
+        margin: 20px 0;
+        text-align: center;
+        list-style-type: none;
+        border: #7f694c 1px solid;
+        padding: 5px;
+    }
+    .book_con_bottom .con_nav a{
+        text-decoration: none;
+        /* display: block; */
+        /* background-color: #7f694c; */
+        /* box-sizing: border-box; */
+        padding:10px 50px;
+        font-size: 15px;
+        color: #5a4933;
+    }   
+    .book_con_bottom .con_nav li:hover{
+        background-color: #7f694c;
+    }
+    .book_con_bottom .con_nav a:hover{
+        color: #fff;
+    }
+    
+    /* 書籍內容 */
+    .book_con_bottom .con_item{
+        margin-left: 12px;
+        margin-bottom: 25px;
+        color: #4b3c2a;
+    }
+    .book_con_bottom .con_item h3{
+        border-bottom: #ccc 1px solid;
+    }
+    
+    
+    /* 同類書籍推薦 */
+    .con_product_more{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+    .con_product_box{
+        width: 140px;
+        border:1px solid #d8a68b94;
+        border-radius: 5px;
+        position: relative;
+        margin-left: 50px;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+    .con_product_box .pi{
+        width: 100%;
+        height: 65%;
+        box-sizing: border-box;
+        padding: 5px 15px 0px 15px;
+    }
+    .con_product_box img{
+        width: 100%;
+        vertical-align: top;/*類似reset 因為框框會有多出的顏色(可以試試把這條去掉看差別)*/
+        position: relative;
+    }
+    
+    .con_product_box .shop{
+        position: absolute;
+        top: 0;
+        left:-10px;
+        background-color: #a77f69;
+        color: #fff;
+        padding: 5px 5px;
+        margin-top:10px ;
+    }
+    
+    .con_product_box .tr{
+        width: 0;
+        height: 0;
+        border-top: 5px solid #75594a;
+        border-left: 10px solid transparent;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+    .con_product_box .txt2{
+        padding: 20px;
+        height: 35%;
+    }
+    .con_product_box .txt2 h4{
+        font-size: 15px;
+        text-align: center;
+        color: #5a4933;
+    }
+    .con_product_box .txt2 p{
+        text-align: left;
+        margin-top: 5px;
+        font-size: 5px;
+        margin-left: 4px;
+        color: #aaa;
+    }
+    .con_product_box .txt2 span{
+        color: #ca7e4c;
+        margin-left: 70px;
+        font-size: 20px;
+    }
+    
+}
