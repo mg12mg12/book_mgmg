@@ -425,7 +425,7 @@ footer{
         list-style-type: none;
         box-sizing: border-box;
         margin: 20px auto;
-        font-size: 12px;
+        
         line-height: 45px;
         display: flex;
         text-align: center;
@@ -445,7 +445,7 @@ footer{
         box-sizing: border-box;
         text-align: center;
         padding: 0px 5px;
-        font-size: 8px;
+        font-size: 5;
         /* border: 1px solid #7f694c; */
     }
     .book_li a:hover{
