@@ -696,37 +696,6 @@
         overflow: hidden;
     }
 
-    #sliderBoard ul{ 
-        width: 2000px;
-        position: relative;
-        list-style-type: none;
-        animation: slider 20s infinite;
-        padding-inline-start: 0px;
-    }
-
-    #sliderBoard li{ /*幫自己排排站*/
-        width: 400px;
-        /* height: 600px; */
-
-        font:bold 100px Tahoma;
-        text-align: center;
-        line-height: 200px;
-        float: left; 
-    }
-    #sliderBoard img{
-        width: 100%;
-    }
-
-
-    @keyframes slider{
-        0%{left:    0px}
-        20%{left: -400px}
-        35%{left: -800px}
-        50%{left: -1200px}
-        65%{left: -1600px}
-        100%{left:   0px}
-    }
-
 }
 
 
@@ -1069,6 +1038,7 @@
     /* margin: -10%; */
     margin-top: 0;
     list-style-type: none;
+    padding-inline-start: 0px;
   }
   .book .box{
       margin-top: -10%;
@@ -1130,10 +1100,19 @@
   .choose_book img:hover{
     transform: translateX(-40%) translateY(-70%) rotatez(25deg);
   }
+  .book .box{
+      overflow: hidden;
+  }
+  @media (max-width:450px){
+    .choose_book li:nth-child(1){
+        margin-top: 50px;
+      }
+  }
   @media (min-width:450px){
     .choose_book{
       margin: 190px 40px;
     }
+    
   }
   @media (min-width:600px){
     :root {
