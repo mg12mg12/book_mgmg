@@ -1,4 +1,6 @@
-
+*{
+    font-family:"Tahoma","Microsoft JhengHei";
+}
 #menu_control{
     position: absolute;
     display: none;

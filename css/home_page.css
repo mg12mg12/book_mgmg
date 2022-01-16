@@ -186,6 +186,117 @@
 }
 
 
+/* banner區 */
+.full_banner{
+    width: 100%;
+    background-image:url(../pic/library\ \(new\).jpg) ;
+    background-position: center;
+    margin-top: 90px;
+    box-shadow:0px -300px 10px #00000048 inset ,
+               0px -400px 10px #00000031 inset ;
+}
+
+.logo_white{
+    /* border: solid 2px black; */
+    height: 70%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+.logo_white img{
+    /* border: 2px solid black; */
+    height: 150px;
+    /* position: relative;
+    left: 640px;
+    top: 200px; */
+}
+
+.booking{
+    display:block;
+    font-size: 27px;
+    color: #fff;
+    box-sizing: border-box;
+    /* padding: 0px 40px; */
+    letter-spacing: 10px;/*怎麼讓最後字沒有間距???*/
+    text-align: center;
+}
+.booking h3 a{
+    text-decoration: none;
+    color: #fff;
+}
+.booking h3{
+    border: solid 2px #fff;
+    display: inline-block;
+    padding: 0px 40px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #dddddd3d,
+                4px 4px 2px #dddddd2d,
+                6px 6px 2px #dddddd1d;
+    position: relative;
+    top: 0;
+    transition: .5s;
+}
+.booking h3:hover{
+    top:4px;
+    box-shadow: 0px 0px 0px #dddddd3d,
+                0px 0px 0px #dddddd2d,
+                2px 2px 0px #dddddd1d;
+}
+/* 滾滾滾出現跟消失 */
+.scro{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.scro.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* 輪播 */
+#sliderBoard{ /*多的藏起來*/
+	/* border: 5px dashed #aaa;  */
+	margin:  auto;
+	width: 700px;
+	/* height: 600px; */
+	overflow: hidden;
+}
+
+#sliderBoard ul{ 
+	width: 2000px;
+	position: relative;
+    list-style-type: none;
+	animation: slider 20s infinite;
+    padding-inline-start: 0px;
+}
+
+#sliderBoard li{ /*幫自己排排站*/
+	width: 400px;
+	/* height: 600px; */
+
+	font:bold 100px Tahoma;
+	text-align: center;
+	line-height: 200px;
+	float: left; 
+}
+#sliderBoard img{
+    width: 100%;
+}
+
+
+@keyframes slider{
+	 0%{left:    0px}
+	20%{left: -400px}
+	35%{left: -800px}
+	50%{left: -1200px}
+	65%{left: -1600px}
+	100%{left:   0px}
+}
+
+
+
 
 
 /* --------手機-------- */
@@ -239,8 +350,39 @@
         position: absolute;
         top: 40px;
     }
-
-
+    /* banner區 */
+    .banner{
+        /* border: black 1px solid; */
+        width:100%;
+        height: 550px;
+        margin: auto;
+        text-align: center;
+    }
+    .booking{
+        margin-top: -100px;
+    }
+    /* 滾滾像下提示 */
+    .banner .pho_scro{
+        margin-top: 60px;
+        width: 50px;
+        animation: anim 2s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes anim {
+        0% {
+          transform:  sacle(1);
+        }
+        25% {
+          transform:  scale(0.9);
+        }
+        50% {
+          transform:  scale(0.9);
+        }
+        75% {
+          transform:  scale(1);
+        }
+        
+      }
 
     /* 休息室簡介 */
     .lounge{
@@ -359,9 +501,10 @@
         width: 100%;
         /* display: flex; */
         margin: auto;
+        margin-top: 100px;
         text-align: center;
-        margin-top: 200px;
         margin-bottom: 70px;
+        /* position: relative; */
     }
 
     .book_class{
@@ -369,20 +512,25 @@
         font-size: 25px;
         margin:auto;
         display: flex;
-        justify-content: space-around;
+        text-align: center;
+        /* position: absolute;
+        top: -10%;
+        left: 45%; */
+        /* justify-content: space-around; */
 
     }
     .book_class a{
-        line-height: 80px;
+        /* line-height: 80px; */
         color: #7f694c;
         text-decoration: none;
         display: inline-block;
         position: relative;
+        margin: auto;
     }
     /* .book_class a:hover{
         left: -30px;
     } */
-    .book_class a::after{
+    /* .book_class a::after{
         content: '';
         width: 0;
         height: 2px;
@@ -392,19 +540,19 @@
     }
     .book_class a:hover:after{
         width: 100%;
-    }
-    .choose_book{
-        /* display: flex; */
+    } */
+    /* .choose_book{
+        display: flex;
         margin: auto;
         width:70%;
-    }
-    .choose_book .books{
-        /* border: solid 1px black; */
+    } */
+    /* .choose_book .books{
+        border: solid 1px black;
         text-decoration: none;
         display: flex;
         width: 100%;
-    }
-    .choose_book .books img{
+    } */
+    /* .choose_book .books img{
         height: 100px;
         margin: 20px 70px;
         transition: .5s;
@@ -427,7 +575,7 @@
         font-size: 40px;
         color: #7f694c;
         display: none;
-    }
+    } */
 
     /* 商品 */
     .product{
@@ -539,7 +687,45 @@
     .foot_txt:nth-child(1){
         margin-left: 100px;
     }
+    /* 輪播 */
+    #sliderBoard{ /*多的藏起來*/
+        /* border: 5px dashed #aaa;  */
+        margin:  auto;
+        width: 70%;
+        /* height: 600px; */
+        overflow: hidden;
+    }
 
+    #sliderBoard ul{ 
+        width: 2000px;
+        position: relative;
+        list-style-type: none;
+        animation: slider 20s infinite;
+        padding-inline-start: 0px;
+    }
+
+    #sliderBoard li{ /*幫自己排排站*/
+        width: 400px;
+        /* height: 600px; */
+
+        font:bold 100px Tahoma;
+        text-align: center;
+        line-height: 200px;
+        float: left; 
+    }
+    #sliderBoard img{
+        width: 100%;
+    }
+
+
+    @keyframes slider{
+        0%{left:    0px}
+        20%{left: -400px}
+        35%{left: -800px}
+        50%{left: -1200px}
+        65%{left: -1600px}
+        100%{left:   0px}
+    }
 
 }
 
@@ -582,7 +768,17 @@
     .icon_box{
         margin-top:40px ;
     }
-
+    /* banner區 */
+    .banner{
+        /* border: black 1px solid; */
+        width:1200px;
+        height: 550px;
+        margin: auto;
+        text-align: center;
+    }
+    .banner .pho_scro{
+        display: none;
+    }
 
     /* 休息室簡介 */
     .lounge{
@@ -623,17 +819,17 @@
         display: flex;
         position: relative;
     }
-    .lounge_pic_01{
+    /* .lounge_pic_01{
         height: 100%;
-        /* border: solid 1px black; */
-    }
-    .lounge_pic_01 img{
+        
+    } */
+    /* .lounge_pic_01 img{
         height: 350px;
         margin-right: 70px;
         position: relative;
         margin-top: 50px;
         z-index: 2;
-    } 
+    }  */
     /* .lounge_pic_02{
         height: 100%;
     }
@@ -686,10 +882,10 @@
     .book{
         /* border: black solid 1px; */
         width: 1100px;
-        display: flex;
+        /* display: flex; */
         margin: auto;
         text-align: center;
-        margin-top: 200px;
+        margin-top: 50px;
         margin-bottom: 70px;
     }
 
@@ -697,15 +893,16 @@
         /* border: 1px solid black; */
         font-size: 25px;
         margin:auto;
+        /* position: relative; */
     }
     .book_class a{
         line-height: 80px;
         color: #7f694c;
         text-decoration: none;
         display: inline-block;
-        position: relative;
+        /* position: absolute; */
     }
-    .book_class a:hover{
+    /* .book_class a:hover{
         left: -30px;
     }
     .book_class a::after{
@@ -718,13 +915,13 @@
     }
     .book_class a:hover:after{
         width: 100%;
-    }
-    .choose_book{
+    } */
+    /* .choose_book{
         display: flex;
         margin: auto;
     }
     .choose_book .books{
-        /* border: solid 1px black; */
+        
         text-decoration: none;
     }
     .choose_book .books img{
@@ -749,14 +946,14 @@
         margin-top: 110px;
         font-size: 40px;
         color: #7f694c;
-    }
+    } */
 
 
 
     /* 商品 */
     .product{
         /* border: solid 1px black; */
-        width: 100%;
+        width: 1200px;
         margin: auto;
         text-align: center;
         display: flex;
@@ -766,6 +963,7 @@
     }
     .pr,.pr_long{
         position: relative;
+        margin: 0px 20px;
     }
     .pr img,.pr_long img{
         width: 100%;
@@ -777,7 +975,7 @@
         top:0;
         display: block;
         background-color: transparent;
-        height: 200px;
+        height: 150px;
         width: 100%;
         transition: .5s;
     }
@@ -785,15 +983,18 @@
         margin-top: 110px;
         color: #fff;
         font-size: 30px;
-        
+        font-weight: bold;
     }
     .pr_long p{
         margin-top: 110px;
         color: #fff;
         font-size: 30px;
+        font-weight: bold;
     }
-    .pr .txt_box:hover,.pr_long .txt_box:hover{
-        background-color: #a77f6988;
+    .pr .txt_box:hover,.pr_long .txt_box:hover {
+        /* background-color: #a77f6988;
+        font-size: 40px; */
+        transform: scale(1.2);
     }
 
     /* 頁尾 */
@@ -854,3 +1055,128 @@
     }
 
 }
+
+
+
+/* 新書區 */
+:root {
+    --columns: 3;
+    
+  }
+  .choose_book{
+    display:grid;
+    grid-template-columns: repeat(var(--columns),1fr);
+    /* margin: -10%; */
+    margin-top: 0;
+    list-style-type: none;
+  }
+  .book .box{
+      margin-top: -10%;
+  }
+  .choose_book li{
+    grid-column-end: span 2;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-top: -25%;
+    margin-left: 10%;
+  }
+  
+  .choose_book li:nth-child(2n){
+    grid-column-start:2;
+  }
+  
+  .choose_book li::before, .choose_book li::after {
+    content:'';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: left, right;
+  }
+  
+  .choose_book li::before{
+    z-index: -10;
+    /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
+    /* -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background-image: url(../pic/flower_up.png);
+  }
+  
+  .choose_book li::after{
+    clip-path: polygon(100% 50%, 50% 100%, 0 50%, 20% 50%, 50% 80%,80% 50%);
+    -webkit-clip-path: polygon(100% 50%, 50% 100%, 0 50%, 20% 50%, 50% 80%,80% 50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background-image: url(../pic/flower_down.png);
+  }
+  
+  
+  .choose_book img{
+    position: absolute;
+    width: 43%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-60%);
+    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.3);
+    transition-property: transform;
+    transition-duration: .3s;
+  }
+  
+  .choose_book img:hover{
+    transform: translateX(-40%) translateY(-70%) rotatez(25deg);
+  }
+  @media (min-width:450px){
+    .choose_book{
+      margin: 190px 40px;
+    }
+  }
+  @media (min-width:600px){
+    :root {
+      --columns: 5;
+    }
+    .choose_book li:nth-child(2n){
+      grid-column-start:auto;
+    }
+    .choose_book li:nth-child(4n-1){
+      grid-column-start:2;
+    }
+    /* .book_class{
+        top: -20%;
+        left: 45%;
+
+    } */
+  }
+  @media (min-width:900px){
+    :root {
+      --columns: 7;
+    }
+    .choose_book li:nth-child(4n-1){
+      grid-column-start:auto;
+    }
+    .choose_book li:nth-child(6n-2){
+      grid-column-start:2;
+    }
+  }
+  @media (min-width:1200px){
+    :root {
+      --columns: 9;
+    }
+    .choose_book li:nth-child(6n-2){
+      grid-column-start:auto;
+    }
+    .choose_book li:nth-child(8n-3){
+      grid-column-start:2;
+    }
+  }
+  
+  
+  
+  
+
+
+
