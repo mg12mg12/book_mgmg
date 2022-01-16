@@ -289,6 +289,7 @@ footer{
 }
 .booking_con .txt .input_item{
     line-height: 25px;
+    font-size: 16px;
     /* border: 1px solid black; */
 }
 .booking_con .txt .input_item label{
@@ -344,7 +345,7 @@ footer{
     width: 100%;
 }
 #lounge{
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /* --------手機-------- */
@@ -453,7 +454,9 @@ footer{
     .icon_box{
         margin-top:40px ;
     }
-
+    .booking_con{
+        width: 1200px;
+    }
 
     
 }
