@@ -258,8 +258,8 @@
 /* 輪播 */
 #sliderBoard{ /*多的藏起來*/
 	/* border: 5px dashed #aaa;  */
-	margin:  auto;
-	width: 700px;
+	margin: auto;
+	width: 690px;
 	/* height: 600px; */
 	overflow: hidden;
 }
@@ -436,30 +436,7 @@
         /* display: flex; */
         position: relative;
     }
-    .lounge_pic_01{
-        width: 100%;
     
-        /* border: solid 1px black; */
-    }
-    .lounge_pic_01 img{
-        width:90%;
-        margin: auto;
-        /* margin-right: 70px; */
-        position: relative;
-        margin-top: 50px;
-        z-index: 2;
-    } 
-    .lounge_pic_02{
-        width: 100%;
-        display: none;
-        /* border: solid 1px black; */
-    }
-    .lounge_pic_02 img{
-        width:100%;
-        opacity:0.3;
-        position: absolute;
-        left: 50px;
-    } 
     .lounge_txt{
         /* border: solid 1px black; */
         height: 100%;
@@ -751,7 +728,7 @@
 
     /* 休息室簡介 */
     .lounge{
-        width: 90%;
+        width: 1200px;
         margin: auto;
         text-align: center;
     }
