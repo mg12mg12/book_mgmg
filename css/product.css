@@ -146,6 +146,7 @@
     color: #7f694c;
     overflow:hidden;
     margin-top: 1px;
+    font-size: 15px;
 }
 .nav a span{
     display: block;
@@ -439,7 +440,7 @@ footer{
         width: 100%;
         text-decoration: none;
         color: #7f694c;
-        /* border-bottom:1px dashed #a77f69 ; */
+        /* border-bottom:1px solid #a77f69 ; */
         display: block;
         margin: auto;
         box-sizing: border-box;

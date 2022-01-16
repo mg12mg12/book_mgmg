@@ -146,6 +146,7 @@
     color: #7f694c;
     overflow:hidden;
     margin-top: 1px;
+    font-size: 15px;
 }
 .nav a span{
     display: block;
