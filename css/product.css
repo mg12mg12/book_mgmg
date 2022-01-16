@@ -445,6 +445,7 @@ footer{
         box-sizing: border-box;
         text-align: center;
         padding: 0px 5px;
+        font-size: 8px;
         /* border: 1px solid #7f694c; */
     }
     .book_li a:hover{
