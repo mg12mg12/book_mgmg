@@ -425,7 +425,7 @@ footer{
         list-style-type: none;
         box-sizing: border-box;
         margin: 20px auto;
-        font-size: 16px;
+        font-size: 12px;
         line-height: 45px;
         display: flex;
         text-align: center;
@@ -433,6 +433,7 @@ footer{
     }
     .book_li li{
         margin: auto;
+        
     }
     .book_li a{
         width: 100%;
@@ -443,11 +444,14 @@ footer{
         margin: auto;
         box-sizing: border-box;
         text-align: center;
+        padding: 0px 5px;
+        /* border: 1px solid #7f694c; */
     }
     .book_li a:hover{
         background-color: #aaa;
         color: #fff;
     }
+    
 }
 
 /* --------桌機-------- */
