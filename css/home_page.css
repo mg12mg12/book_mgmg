@@ -1,6 +1,33 @@
 *{
     font-family:"Tahoma","Microsoft JhengHei";
 }
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #d6c4ab;
+    z-index: 999;
+}
+#status{
+    position: fixed;
+    width: 218px;
+    /* height: 419px; */
+    margin-left: -140px;
+    margin-top: -160px;
+    left: 52%;
+    top: 55%;
+}
+#status img{
+    width: 100%;
+    animation:loading_img 1.9s;
+}
+@keyframes loading_img{
+    0%{opacity: .3;transform:scale(1) ;}
+    50%{opacity: 1;transform:scale(2) ;}
+    100%{opacity: .3;transform:scale(2.2) ;}
+}
 #menu_control{
     position: absolute;
     display: none;
@@ -394,6 +421,7 @@
     .lounge .new{
         margin: 20px 0px;
         display: inline-flex;
+        animation: new  2s infinite;
     }
     .lounge .new .what_new{
         margin: 5px 0px;
@@ -413,13 +441,18 @@
         border-radius:0px 15px 15px 0px;
     }
     .lounge .new .con a{
-        color: #ccc;
-        text-decoration: none;
-        transition: .5s;
-    }
-    .lounge .new .con a:hover{
         color: #7f694c;
+        text-decoration: none;
     }
+    @keyframes new{
+        0%{opacity: .9; transform:  scale(1);}
+        50%{opacity: 1; transform:  scale(1.1);}
+        100%{opacity: .9; transform:  scale(1);}
+    }
+    /* .lounge .new .con a:hover{
+        color: #7f694c;
+    } */
+
     /* 不知道要不要加的多餘下底線 */
     /* .lounge .new .con a::after{
         content: '';
@@ -491,28 +524,26 @@
         margin:auto;
         display: flex;
         text-align: center;
-
-        /* 背景ㄋQ_Q */
-        /* background-image: url(../pic/scroll.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat:no-repeat; */
-
-
-
         /* position: absolute;
         top: -10%;
         left: 45%; */
         /* justify-content: space-around; */
-        
+        /* 背景ㄋQ_Q */
+        background-image: url(../pic/scroll_1\ \(1\).png);
+        /* background-color: #a77f69; */
+        background-position: center ;
+        background-size: 200px 100px;;
+        background-repeat:no-repeat;
     }
     .book_class a{
         /* line-height: 80px; */
-        color: #7f694c;
+        color: #fff;
         text-decoration: none;
         display: inline-block;
         position: relative;
         margin: auto;
+        box-sizing: border-box;
+        padding: 20px 40px;
         
     }
     /* .book_class a:hover{
@@ -746,6 +777,7 @@
     .lounge .new{
         margin: 20px 0px;
         display: inline-flex;
+        animation: new  2s infinite;
     }
     .lounge .new .what_new{
         margin: 5px 0px;
@@ -765,13 +797,17 @@
         border-radius:0px 15px 15px 0px;
     }
     .lounge .new .con a{
-        color: #ccc;
-        text-decoration: none;
-        transition: .5s;
-    }
-    .lounge .new .con a:hover{
         color: #7f694c;
+        text-decoration: none;
     }
+    @keyframes new{
+        0%{opacity: .9; transform:  scale(1);}
+        50%{opacity: 1; transform:  scale(1.1);}
+        100%{opacity: .9; transform:  scale(1);}
+    }
+    /* .lounge .new .con a:hover{
+        color: #7f694c;
+    } */
     .lounge_con{
         display: flex;
         position: relative;
@@ -851,12 +887,20 @@
         font-size: 25px;
         margin:auto;
         /* position: relative; */
+        /* 背景ㄋQ_Q */
+        background-image: url(../pic/scroll_1\ \(1\).png);
+        /* background-color: #a77f69; */
+        background-position: center bottom 16px;
+        background-size: contain;
+        background-repeat:no-repeat;
     }
+    
     .book_class a{
         line-height: 80px;
-        color: #7f694c;
+        color: #fff;
         text-decoration: none;
-        display: inline-block;
+        display: block;
+        margin:  auto;
         /* position: absolute; */
     }
     /* .book_class a:hover{
@@ -1020,6 +1064,16 @@
     --columns: 3;
     
   }
+  /* .box .more{
+      text-decoration: none;
+      position: absolute;
+      bottom: 8%;
+      right:10% ;
+      font-size: 20px;
+      color: #a77f69;
+  } */
+  
+  
   .choose_book{
     display:grid;
     grid-template-columns: repeat(var(--columns),1fr);

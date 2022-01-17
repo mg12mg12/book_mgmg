@@ -1,6 +1,34 @@
 *{
     font-family:"Tahoma","Microsoft JhengHei";
 }
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #d6c4ab;
+    z-index: 999;
+}
+#status{
+    position: fixed;
+    width: 218px;
+    /* height: 419px; */
+    margin-left: -140px;
+    margin-top: -160px;
+    left: 52%;
+    top: 55%;
+}
+#status img{
+    width: 100%;
+    animation:loading_img 1.9s;
+}
+@keyframes loading_img{
+    0%{opacity: .3;transform:scale(1) ;}
+    50%{opacity: 1;transform:scale(2) ;}
+    100%{opacity: .3;transform:scale(2.2) ;}
+}
+
 #menu_control{
     position: absolute;
     display: none;
@@ -297,6 +325,10 @@ footer{
     line-height:35px ;
     color: #7f694c;
 }
+.lounge_wrap .lounge_txt p{
+    font-size: 16px;
+    line-height:2 ;
+}
 .lounge_wrap .lounge_txt button{
     margin-top: 10px;
     background-color: #7f694c;
@@ -394,7 +426,7 @@ footer{
         width: 70%;
         margin: auto;
         box-sizing: border-box;
-        padding: 40px 0;
+        /* padding: 40px 0; */
     }
     .lounge_wrap:nth-child() .lounge_txt{
         padding-left: 20px;
@@ -469,3 +501,30 @@ footer{
     }
     
 }
+
+/* 滾滾滾出現跟消失 */
+.scro{
+    position: relative;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.scro.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+/* 飛飛飛上去 */
+#gotop {
+    position: fixed;
+    border-radius: 50px;
+    right: 20px;
+    bottom: 30px;
+    padding: 10px 16px;
+    font-size: 25px;
+    background: rgba(255, 195, 139, 0.884);
+    color: #FAFCFD;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+  

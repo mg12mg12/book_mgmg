@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/booking.css">
+    <!-- <script src="js/booking.js"></script> -->
     <!-- <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
   <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
@@ -24,9 +25,18 @@
     });
   });
   </script> -->
+  <script src="js/jquery.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/booking.js"></script>
 </head>
 
 <body>
+    <!-- loading的東西 -->
+    <div id="loading">
+        <div id="status"><img src="pic/logo_3_none.png" ></div>
+     </div>
     <!-- 導覽列 -->
     <input type="checkbox" name="" id="menu_control">
     <header class="full_header">
@@ -78,7 +88,7 @@
     <!-- 預約內容 -->
     <div class="booking_con">
         <!-- 休息室圖片 -->
-        <div class="pic">
+        <div class="pic" id="showPanel">
             <img src="pic/lounge_pic (1).jpg" alt="">
         </div>
         <!-- 預約資料區 -->
@@ -87,9 +97,9 @@
                 <div class="input_item">
                     <P>選擇休息室：</P>
                     <select id="lounge" name="選擇休息室">
-                        <option value="1">消音休息室</option>
-                        <option value="2">普通の休息室</option>
-                        <option value="3">組隊拆家休息室</option>
+                        <option value = 1>消音休息室</option>
+                        <option value = 2>普通の休息室</option>
+                        <option value = 3>組隊拆家休息室</option>
                     </select>
                 </div>
                 <div class="input_item">

@@ -12,8 +12,26 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/lounge.css">
+    
+    <link rel="stylesheet" href="css/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="css/assets/owl.theme.default.min.css">
+
+     <script src="js/jquery.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/scroll.js"></script>
+     <script src="js/lounge.js"></script>
+     <script src="js/loading.js"></script>
 </head>
 <body>
+    <!-- loading的東西 -->
+    <div id="loading">
+        <div id="status"><img src="pic/logo_3_none.png" ></div>
+    </div>
+
+    <!-- 起飛的按鈕 -->
+    <div id="gotop">˄</div>
+
     <!-- 導覽列 -->
     <input type="checkbox" name="" id="menu_control">
     <header class="full_header">
@@ -64,7 +82,7 @@
 
     <!-- 圖文介紹 -->
     <div class="lounge_present">
-        <div class="lounge_wrap">
+        <div class="lounge_wrap scro">
             <div class="lounge_pic">
                 <img src="pic/lounge_pic (1).jpg" alt="休息室1">
             </div>
@@ -76,7 +94,7 @@
             </div>
         </div>
 
-        <div class="lounge_wrap">
+        <div class="lounge_wrap scro">
             <div class="lounge_pic">
                 <img src="pic/lounge_pic (2).jpg" alt="休息室2">
             </div>
@@ -88,7 +106,7 @@
             </div>
         </div>
 
-        <div class="lounge_wrap">
+        <div class="lounge_wrap scro">
             <div class="lounge_pic">
                 <img src="pic/lounge_pic (3).jpg" alt="休息室3">
             </div>
@@ -100,7 +118,7 @@
             </div>
         </div>
 
-        <div class="lounge_wrap">
+        <div class="lounge_wrap scro">
             <div class="lounge_pic">
                 <img src="pic/lounge_pic (4).jpg" alt="休息室4">
             </div>
@@ -113,6 +131,9 @@
         </div>
     </div>
     
+    
+
+
     <!-- 頁尾 -->
     <footer class="full_footer">
         <div class="footer">

@@ -12,9 +12,20 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/about_map.css">
+    <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/scroll.js"></script>
+     <script src="js/about_map.js"></script>
+     <script src="js/loading.js"></script>
 </head>
 
 <body>
+    <!-- loading的東西 -->
+    <div id="loading">
+        <div id="status"><img src="pic/logo_3_none.png" ></div>
+     </div>
+     
     <!-- 導覽列 -->
     <input type="checkbox" name="" id="menu_control">
     <header class="full_header">
@@ -85,7 +96,7 @@
             <h2>店鋪資訊</h2>
         </div>
         <div class="map_box">
-            <div class="map_item">
+            <div class="map_item scro">
                 <div class="pic">
                     <img src="pic/store1.jpg" alt="">
                 </div>
@@ -100,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="map_item">
+            <div class="map_item scro">
                 <div class="pic">
                     <img src="pic/store2.jpg" alt="">
                 </div>
@@ -115,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="map_item">
+            <div class="map_item scro">
                 <div class="pic">
                     <img src="pic/store3.jpg" alt="">
                 </div>
