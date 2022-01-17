@@ -723,7 +723,6 @@
 
 
 
-
 /* --------桌機-------- */
 
 @media screen and (min-width:875px) {
@@ -1108,6 +1107,7 @@
     background-position: left, right;
   }
   
+  
   .choose_book li::before{
     z-index: -10;
     /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
@@ -1194,6 +1194,26 @@
       grid-column-start:2;
     }
   }
+
+  /* 飛飛飛上去 */
+#gotop {
+    position: fixed;
+    width: 20px;
+    height: 52px;
+    border-radius: 50px;
+    right: 20px;
+    bottom: 30px;
+    padding: 10px 16px;
+    font-size: 25px;
+    background-image: url(../pic/pagetop.gif);
+    /* background: rgba(255, 195, 139, 0.884); */
+    background-position: bottom;
+    background-size: cover;
+    color: transparent;
+    cursor: pointer;
+    z-index: 20;
+    
+}
   
   
   
