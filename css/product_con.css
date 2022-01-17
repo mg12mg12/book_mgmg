@@ -196,7 +196,10 @@
 /* 頁尾 */
 footer{
     width: 100%;
-    background-color: #ac87735d;
+    background-image: url(../pic/footer_2.png);
+    background-position: center top 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
     box-sizing: border-box;
 }
 .footer{
@@ -242,6 +245,8 @@ footer{
 }
 .foot_logo img{
     height: 100px;
+    opacity: .5;
+    filter: brightness(60%);
 }
 .copyright{
     text-align: center;
@@ -740,7 +745,7 @@ footer{
     }
     .con_product_box img{
         width: 100%;
-        vertical-align: top;/*類似reset 因為框框會有多出的顏色(可以試試把這條去掉看差別)*/
+        vertical-align: top;
         position: relative;
     }
     
@@ -790,7 +795,7 @@ footer{
     }
 }
 
-
+/* ----------------後面加上的------------------ */
 /* 點小秀大 */
 .sma{
    width: 10%;
@@ -813,5 +818,6 @@ footer{
     color: transparent;
     cursor: pointer;
     z-index: 20;
-    
 }
+
+

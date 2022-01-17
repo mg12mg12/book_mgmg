@@ -1,3 +1,4 @@
+// 點小秀大
 function showLarge(e){
 	// let small = e.target;
 	// document.getElementById("large").src = small.src;
@@ -12,3 +13,24 @@ function init(){
 }
 
 window.addEventListener("load", init, false);
+
+
+
+
+// 貓頭鷹
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})

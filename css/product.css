@@ -196,7 +196,10 @@
 /* 頁尾 */
 footer{
     width: 100%;
-    background-color: #ac87735d;
+    background-image: url(../pic/footer_2.png);
+    background-position: center top 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
     box-sizing: border-box;
 }
 .footer{
@@ -242,6 +245,8 @@ footer{
 }
 .foot_logo img{
     height: 100px;
+    opacity: .5;
+    filter: brightness(60%);
 }
 .copyright{
     text-align: center;
@@ -479,6 +484,11 @@ footer{
     .book_li a:hover{
         background-color: #aaa;
         color: #fff;
+    }
+    .product_box .txt p{
+        font-size: 14px;
+        box-sizing: border-box;
+        padding-left: 10px;
     }
     
 }
