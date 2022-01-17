@@ -374,43 +374,7 @@ footer{
     padding:30px 0px 0px 50px;
     position: relative;
 }
-.map_item .txt ::before{
-    content: "";
-    display: block;
-    width: 100px;
-    height: 100px;
-    border: 1px solid rgba(228, 228, 228, 0.438);
-    animation: mpa_rotate 5s linear infinite alternate-reverse;
-    transform: rotateZ(45deg);
-    position: absolute;
-    top: 40%;
-    left: 30%;  
-    z-index: -1;
-}
-.map_item .txt ::after{
-    content: "";
-    display: block;
-    width: 80px;
-    height: 80px;
-    border: 1px solid rgba(231, 231, 231, 0.438);
-    animation: mpa_rotate_2 6s linear infinite alternate-reverse;
-    transform: rotateZ(45deg);
-    position: absolute;
-    top: 43%;
-    left: 33%;  
-    z-index: -1;
-}
-@keyframes mpa_rotate{
-    0%{opacity: .3;transform:scale(.8) rotate(0deg);}
-    50%{opacity: 1;transform:scale(1) rotate(180deg);}
-    100%{opacity: .3;transform:scale(.8) rotate(360deg);}
-}
-@keyframes mpa_rotate_2{
-    0%{opacity: .3;transform:scale(.8) rotate(0deg);}
-    25%{opacity: 1;transform:scale(1) rotate(-90deg);}
-    75%{opacity: 1;transform:scale(1) rotate(-180deg);}
-    100%{opacity: .3;transform:scale(.8) rotate(-360deg);}
-}
+
 .map_item .txt h4{
     font-size: 20px;
     color: #5a4933;
@@ -536,6 +500,43 @@ footer{
         margin-top: 30px;
         text-align: center;
     }
+    .map_item .txt ::before{
+        content: "";
+        display: block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid rgba(209, 194, 194, 0.438);
+        animation: mpa_rotate 5s linear infinite alternate-reverse;
+        transform: rotateZ(45deg);
+        position: absolute;
+        top: 40%;
+        left: 30%;  
+        z-index: -1;
+    }
+    .map_item .txt ::after{
+        content: "";
+        display: block;
+        width: 80px;
+        height: 80px;
+        border: 1px solid rgba(199, 199, 199, 0.438);
+        animation: mpa_rotate_2 6s linear infinite alternate-reverse;
+        transform: rotateZ(45deg);
+        position: absolute;
+        top: 43%;
+        left: 33%;  
+        z-index: -1;
+    }
+    @keyframes mpa_rotate{
+        0%{opacity: .3;transform:scale(.8) rotate(0deg);}
+        50%{opacity: 1;transform:scale(1) rotate(180deg);}
+        100%{opacity: .3;transform:scale(.8) rotate(360deg);}
+    }
+    @keyframes mpa_rotate_2{
+        0%{opacity: .3;transform:scale(.8) rotate(0deg);}
+        25%{opacity: 1;transform:scale(1) rotate(-90deg);}
+        75%{opacity: 1;transform:scale(1) rotate(-180deg);}
+        100%{opacity: .3;transform:scale(.8) rotate(-360deg);}
+    }
 }
 
 
@@ -582,6 +583,7 @@ footer{
         display: inline-block;
         background-color: #ffffffaa ;
         margin: 50px 0px;
+
     }
     .scroll_about .txt h3{
         font-size: 30px;
@@ -608,8 +610,36 @@ footer{
     .map_box{
         margin: 0px 100px;
     }
-
+    .map_box .txt{
+        background-image: url(../pic/leaves-geaf907b98_1280.png)  ;
+        background-position: center ;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        
     
+        
+    }
+    /* .map_item .txt ::before{
+        content: "";
+        display: block;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 1px dashed rgba(172, 135, 93, 0.596);
+        animation: mpa_rotate 5s linear infinite alternate-reverse;
+        transform: rotateZ(45deg);
+        position: absolute;
+        top: 5%;
+        left: 25%;  
+        z-index: -1;
+    }
+    @keyframes mpa_rotate{
+        0%{opacity: .3;transform:scale(.8) rotate(0deg);}
+        50%{opacity: 1;transform:scale(1) rotate(180deg);}
+        100%{opacity: .3;transform:scale(.8) rotate(360deg);}
+    }
+     */
 }
 /* 滾滾滾出現跟消失 */
 .scro{
