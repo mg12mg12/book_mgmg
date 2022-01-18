@@ -421,6 +421,7 @@ footer{
     }
     .book_con .buy button:nth-child(2):hover{
         background-color: #5a4933;
+        
     }
     /* 付款取貨方式 */
     .book_con .buy .pay{
@@ -633,6 +634,12 @@ footer{
     .book_con .buy button:nth-child(2){
         color: #fff;
         background-color: #7f694c;
+        animation:button_ani 2s infinite;
+    }
+    @keyframes button_ani{
+        0%{transform:scale(1.1) ;}
+        50%{transform:scale(1) ;}
+        100%{transform:scale(1.1) ;}
     }
     .book_con .buy button:hover{
         background-color: #7f694c;
@@ -640,6 +647,7 @@ footer{
     }
     .book_con .buy button:nth-child(2):hover{
         background-color: #5a4933;
+        transform: scale(1.2);
     }
     /* 付款取貨方式 */
     .book_con .buy .pay{
@@ -736,6 +744,11 @@ footer{
         margin-left: 50px;
         margin-top: 20px;
         text-decoration: none;
+        transition: .3s;
+    }
+    .con_product_box:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 2px 5px #7f694c;
     }
     .con_product_box .pi{
         width: 100%;
@@ -800,6 +813,7 @@ footer{
 .sma{
    width: 10%;
    margin-right:20px ;
+   cursor: pointer;
 }
 /* 飛飛飛上去 */
 #gotop {
