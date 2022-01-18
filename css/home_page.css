@@ -421,7 +421,7 @@
     .lounge .new{
         margin: 20px 0px;
         display: inline-flex;
-        animation: new  2s infinite;
+        /* animation: new  2s infinite; */
     }
     .lounge .new .what_new{
         margin: 5px 0px;
@@ -444,11 +444,11 @@
         color: #7f694c;
         text-decoration: none;
     }
-    @keyframes new{
+    /* @keyframes new{
         0%{opacity: .9; transform:  scale(1);}
         50%{opacity: 1; transform:  scale(1.1);}
         100%{opacity: .9; transform:  scale(1);}
-    }
+    } */
     /* .lounge .new .con a:hover{
         color: #7f694c;
     } */
@@ -476,6 +476,9 @@
         margin: 0px 50px;
         box-sizing: border-box;
         padding-bottom:30px ;
+    }
+    .lounge_txt a{
+        text-decoration: none;
     }
     .lounge_txt h2 a{
         font-size: 30px;
@@ -842,6 +845,9 @@
         box-sizing: border-box;
         padding-bottom:30px ;
         overflow: hidden;
+    }
+    .lounge_txt a{
+        text-decoration: none;
     }
     .lounge_txt h2 a{
         font-size: 30px;
