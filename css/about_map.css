@@ -326,7 +326,7 @@ footer{
 .scroll_about .txt h3{
     font-size: 30px;
     line-height: 60px;
-    color: #7f694c;
+    color: #5f513e;
 }
 .scroll_about .txt p{
     box-sizing: border-box;
@@ -336,7 +336,7 @@ footer{
     margin: 8px 0px;
     margin-left: 10px;
     text-align: left;
-    color: #7f694c;
+    color: #5f513e;
 }
 
 
@@ -489,7 +489,7 @@ footer{
     .scroll_about .txt{
         width: 85%;
         display: inline-block;
-        background-color: #ffffffaa ;
+        background-color: #ffffffc7 ;
         margin: 20px 0px;
     }
     
@@ -581,14 +581,14 @@ footer{
     .scroll_about .txt{
         width: 500px;
         display: inline-block;
-        background-color: #ffffffaa ;
+        background-color: #ffffffc7 ;
         margin: 50px 0px;
 
     }
     .scroll_about .txt h3{
         font-size: 30px;
         line-height: 60px;
-        color: #7f694c;
+        color: #5f513e;
     }
     .scroll_about .txt p{
         box-sizing: border-box;
@@ -598,7 +598,7 @@ footer{
         margin: 8px 0px;
         margin-left: 10px;
         text-align: left;
-        color: #7f694c;
+        color: #5f513e;
     }
     .scroll_about .txt_border{
         border: #fff 3px solid;
